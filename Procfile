@@ -1,1 +1,1 @@
-web: gunicorn test.py:server
+web: gunicorn test:server
