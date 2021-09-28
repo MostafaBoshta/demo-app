@@ -14,8 +14,8 @@ from dash.dependencies import Input, Output
 import webbrowser
 from threading import Timer
 port = 8050
-def open_browser():
-	webbrowser.open_new("http://localhost:{}".format(port))
+#def open_browser():
+#	webbrowser.open_new("http://localhost:{}".format(port))
 app = dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
 server = app.server
 df = pd.read_csv(r'C:\Users\mosta\Downloads\mdt_data_jan_jul_2018.csv')
@@ -75,6 +75,6 @@ app.layout = html.Div([
     dcc.Graph(figure = fig2)
 ])
 
-Timer(0 , open_browser).start();
-app.run_server(debug=True, port=port , use_reloader=False)
+#Timer(0 , open_browser).start();
+app.run_server(debug=True, use_reloader=False)
 
