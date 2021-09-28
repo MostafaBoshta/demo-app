@@ -1,1 +1,1 @@
-web: gunicorn test:server
+web: python test.py runserver 0.0.0.0:8050
