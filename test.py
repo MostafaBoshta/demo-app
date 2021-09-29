@@ -3,8 +3,8 @@ from re import template
 from numpy.core.numeric import True_
 import pandas as pd
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -76,5 +76,11 @@ app.layout = html.Div([
 ])
 
 #Timer(0 , open_browser).start();
-app.run_server(debug=True , port = port)
+if __name__ == '__main__':
+    # For Development only, otherwise use gunicorn or uwsgi to launch, e.g.
+    # gunicorn -b 0.0.0.0:8050 index:app.server
+    app.run_server(
+        port=8050,
+        host='0.0.0.0'
+    )
 
