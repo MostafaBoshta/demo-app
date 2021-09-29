@@ -13,7 +13,7 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 import webbrowser
 from threading import Timer
-#port = 8050
+port = 8050
 #def open_browser():
 #	webbrowser.open_new("http://localhost:{}".format(port))
 app = dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
@@ -76,5 +76,5 @@ app.layout = html.Div([
 ])
 
 #Timer(0 , open_browser).start();
-app.run_server(debug=True)
+app.run_server(debug=True , port = port)
 
