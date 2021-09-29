@@ -76,5 +76,6 @@ app.layout = html.Div([
 ])
 
 #Timer(0 , open_browser).start();
-app.run_server(debug=True)
+const port = Process.env.PORT || 3000
+app.run_server(debug=True )
 
