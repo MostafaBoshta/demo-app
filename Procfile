@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run test.py
+web: gunicorn -b :$PORT test:app
