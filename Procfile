@@ -1,1 +1,1 @@
-web: gunicorn test.wsgi:server
+web: gunicorn test:server
