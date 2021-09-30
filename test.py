@@ -18,7 +18,7 @@ port = 8050
 #	webbrowser.open_new("http://localhost:{}".format(port))
 app = dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
 server = app.server
-df = pd.read_csv(r'C:\Users\mosta\Downloads\mdt_data_jan_jul_2018.csv')
+df = pd.read_csv(r'C:/Users/mosta/Downloads/mdt_data_jan_jul_2018.csv')
 #df['Location'].dropna(axis = 0 , inplace = True)
 
 #The HeatMap
